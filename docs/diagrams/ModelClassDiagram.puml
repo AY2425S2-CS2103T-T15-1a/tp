@@ -15,13 +15,10 @@ Class UserPrefs
 Class UniquePersonList
 Class Person
 Class Address
+Class Email
 Class Name
 Class Phone
-Class Company
-Class Duty
-Class Nric
-Class Rank
-Class Salary
+Class Tag
 
 Class I #FFFFFF
 }
@@ -42,23 +39,16 @@ AddressBook *--> "1" UniquePersonList
 UniquePersonList --> "~* all" Person
 Person *--> Name
 Person *--> Phone
+Person *--> Email
 Person *--> Address
-Person *--> Company
-Person *--> Nric
-Person *--> Rank
-Person *--> Salary
-Person *--> Duty
+Person *--> "*" Tag
 
 Person -[hidden]up--> I
 UniquePersonList -[hidden]right-> I
 
 Name -[hidden]right-> Phone
 Phone -[hidden]right-> Address
-Address -[hidden]right-> Company
-Company -[hidden]right-> Nric
-Nric -[hidden]right-> Rank
-Rank -[hidden]right-> Salary
-Salary -[hidden]right-> Duty
+Address -[hidden]right-> Email
 
 ModelManager --> "~* filtered" Person
 @enduml
