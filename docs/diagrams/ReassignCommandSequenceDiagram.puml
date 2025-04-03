@@ -15,8 +15,8 @@ activate Ui UI_COLOR
 
 Ui -> ReassignCommand : execute("reassign 1 d/oldDutyDate nd/newDutyDate")
 note right #FFAAAA
-A CommandException would be 
-thrown if either unassignDuty 
+A CommandException would be
+thrown if either unassignDuty
 or assignDuty fails.
 end note
 activate ReassignCommand LOGIC_COLOR
@@ -34,5 +34,4 @@ deactivate
 
 Ui --> User : Show updated entry
 deactivate Ui
-
 @enduml
