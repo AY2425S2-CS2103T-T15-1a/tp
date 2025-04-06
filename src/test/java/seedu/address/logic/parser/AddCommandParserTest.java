@@ -222,42 +222,50 @@ public class AddCommandParserTest {
         // invalid name
         assertParseFailure(parser, INVALID_NAME_DESC + PHONE_DESC_BOB + ADDRESS_DESC_BOB
                 + NRIC_DESC_BOB + SALARY_DESC_BOB + COMPANY_DESC_BOB + RANK_DESC_BOB,
-                Name.MESSAGE_CONSTRAINTS);
+                Name.MESSAGE_CONSTRAINTS + "\n"
+                + String.format(MESSAGE_INVALID_COMMAND_FORMAT, AddCommand.MESSAGE_USAGE));
 
         // invalid phone
         assertParseFailure(parser, NAME_DESC_BOB + INVALID_PHONE_DESC + ADDRESS_DESC_BOB
                 + NRIC_DESC_BOB + SALARY_DESC_BOB + COMPANY_DESC_BOB + RANK_DESC_BOB,
-                Phone.MESSAGE_CONSTRAINTS);
+                Phone.MESSAGE_CONSTRAINTS + "\n"
+                + String.format(MESSAGE_INVALID_COMMAND_FORMAT, AddCommand.MESSAGE_USAGE));
 
         // invalid address
         assertParseFailure(parser, NAME_DESC_BOB + PHONE_DESC_BOB + INVALID_ADDRESS_DESC
                 + NRIC_DESC_BOB + SALARY_DESC_BOB + COMPANY_DESC_BOB + RANK_DESC_BOB,
-                Address.MESSAGE_CONSTRAINTS);
+                Address.MESSAGE_CONSTRAINTS + "\n"
+                + String.format(MESSAGE_INVALID_COMMAND_FORMAT, AddCommand.MESSAGE_USAGE));
 
         // invalid nric
         assertParseFailure(parser, NAME_DESC_BOB + PHONE_DESC_BOB + ADDRESS_DESC_BOB
                 + INVALID_NRIC_DESC + SALARY_DESC_BOB + COMPANY_DESC_BOB + RANK_DESC_BOB,
-                Nric.MESSAGE_CONSTRAINTS);
+                Nric.MESSAGE_CONSTRAINTS + "\n"
+                + String.format(MESSAGE_INVALID_COMMAND_FORMAT, AddCommand.MESSAGE_USAGE));
 
         // invalid salary
         assertParseFailure(parser, NAME_DESC_BOB + PHONE_DESC_BOB + ADDRESS_DESC_BOB
                 + NRIC_DESC_BOB + INVALID_SALARY_DESC + COMPANY_DESC_BOB + RANK_DESC_BOB,
-                Salary.MESSAGE_CONSTRAINTS);
+                Salary.MESSAGE_CONSTRAINTS + "\n"
+                + String.format(MESSAGE_INVALID_COMMAND_FORMAT, AddCommand.MESSAGE_USAGE));
 
         // invalid company
         assertParseFailure(parser, NAME_DESC_BOB + PHONE_DESC_BOB + ADDRESS_DESC_BOB
                 + NRIC_DESC_BOB + SALARY_DESC_BOB + INVALID_COMPANY_DESC + RANK_DESC_BOB,
-                Company.MESSAGE_CONSTRAINTS);
+                Company.MESSAGE_CONSTRAINTS + "\n"
+                + String.format(MESSAGE_INVALID_COMMAND_FORMAT, AddCommand.MESSAGE_USAGE));
 
         // invalid rank
         assertParseFailure(parser, NAME_DESC_BOB + PHONE_DESC_BOB + ADDRESS_DESC_BOB
                 + NRIC_DESC_BOB + SALARY_DESC_BOB + COMPANY_DESC_BOB + INVALID_RANK_DESC,
-                Rank.MESSAGE_CONSTRAINTS);
+                Rank.MESSAGE_CONSTRAINTS + "\n"
+                + String.format(MESSAGE_INVALID_COMMAND_FORMAT, AddCommand.MESSAGE_USAGE));
 
         // two invalid values, only first invalid value reported
         assertParseFailure(parser, INVALID_NAME_DESC + PHONE_DESC_BOB + INVALID_ADDRESS_DESC
                 + NRIC_DESC_BOB + SALARY_DESC_BOB + COMPANY_DESC_BOB + RANK_DESC_BOB,
-                Name.MESSAGE_CONSTRAINTS);
+                Name.MESSAGE_CONSTRAINTS + "\n"
+                + String.format(MESSAGE_INVALID_COMMAND_FORMAT, AddCommand.MESSAGE_USAGE));
 
         // non-empty preamble
         assertParseFailure(parser, PREAMBLE_NON_EMPTY + NAME_DESC_BOB + PHONE_DESC_BOB

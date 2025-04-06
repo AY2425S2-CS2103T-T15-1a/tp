@@ -45,18 +45,23 @@ public class AddCommandParser implements Parser<AddCommand> {
 
         argMultimap.verifyNoDuplicatePrefixesFor(PREFIX_NAME, PREFIX_PHONE, PREFIX_ADDRESS,
             PREFIX_NRIC, PREFIX_SALARY, PREFIX_COMPANY, PREFIX_RANK);
-        Name name = ParserUtil.parseName(argMultimap.getValue(PREFIX_NAME).get());
-        Phone phone = ParserUtil.parsePhone(argMultimap.getValue(PREFIX_PHONE).get());
-        Address address = ParserUtil.parseAddress(argMultimap.getValue(PREFIX_ADDRESS).get());
-        Nric nric = ParserUtil.parseNric(argMultimap.getValue(PREFIX_NRIC).get());
-        Duty duty = new Duty(); //add command does not allow adding duties straight away
-        Salary salary = ParserUtil.parseSalary(argMultimap.getValue(PREFIX_SALARY).get());
-        Company company = ParserUtil.parseCompany(argMultimap.getValue(PREFIX_COMPANY).get());
-        Rank rank = ParserUtil.parseRank(argMultimap.getValue(PREFIX_RANK).get());
+        try {
+            Name name = ParserUtil.parseName(argMultimap.getValue(PREFIX_NAME).get());
+            Phone phone = ParserUtil.parsePhone(argMultimap.getValue(PREFIX_PHONE).get());
+            Address address = ParserUtil.parseAddress(argMultimap.getValue(PREFIX_ADDRESS).get());
+            Nric nric = ParserUtil.parseNric(argMultimap.getValue(PREFIX_NRIC).get());
+            Duty duty = new Duty(); //add command does not allow adding duties straight away
+            Salary salary = ParserUtil.parseSalary(argMultimap.getValue(PREFIX_SALARY).get());
+            Company company = ParserUtil.parseCompany(argMultimap.getValue(PREFIX_COMPANY).get());
+            Rank rank = ParserUtil.parseRank(argMultimap.getValue(PREFIX_RANK).get());
 
-        Person person = new Person(name, phone, address, nric, duty, salary, company, rank);
+            Person person = new Person(name, phone, address, nric, duty, salary, company, rank);
 
-        return new AddCommand(person);
+            return new AddCommand(person);
+        } catch (ParseException e) {
+            throw new ParseException(e.getMessage() + "\n"
+                + String.format(MESSAGE_INVALID_COMMAND_FORMAT, AddCommand.MESSAGE_USAGE));
+        }
     }
 
     /**

@@ -44,26 +44,31 @@ public class EditCommandParser implements Parser<EditCommand> {
 
         EditPersonDescriptor editPersonDescriptor = new EditPersonDescriptor();
 
-        if (argMultimap.getValue(PREFIX_NAME).isPresent()) {
-            editPersonDescriptor.setName(ParserUtil.parseName(argMultimap.getValue(PREFIX_NAME).get()));
-        }
-        if (argMultimap.getValue(PREFIX_PHONE).isPresent()) {
-            editPersonDescriptor.setPhone(ParserUtil.parsePhone(argMultimap.getValue(PREFIX_PHONE).get()));
-        }
-        if (argMultimap.getValue(PREFIX_ADDRESS).isPresent()) {
-            editPersonDescriptor.setAddress(ParserUtil.parseAddress(argMultimap.getValue(PREFIX_ADDRESS).get()));
-        }
-        if (argMultimap.getValue(PREFIX_NRIC).isPresent()) {
-            editPersonDescriptor.setNric(ParserUtil.parseNric(argMultimap.getValue(PREFIX_NRIC).get()));
-        }
-        if (argMultimap.getValue(PREFIX_SALARY).isPresent()) {
-            editPersonDescriptor.setSalary(ParserUtil.parseSalary(argMultimap.getValue(PREFIX_SALARY).get()));
-        }
-        if (argMultimap.getValue(PREFIX_COMPANY).isPresent()) {
-            editPersonDescriptor.setCompany(ParserUtil.parseCompany(argMultimap.getValue(PREFIX_COMPANY).get()));
-        }
-        if (argMultimap.getValue(PREFIX_RANK).isPresent()) {
-            editPersonDescriptor.setRank(ParserUtil.parseRank(argMultimap.getValue(PREFIX_RANK).get()));
+        try {
+            if (argMultimap.getValue(PREFIX_NAME).isPresent()) {
+                editPersonDescriptor.setName(ParserUtil.parseName(argMultimap.getValue(PREFIX_NAME).get()));
+            }
+            if (argMultimap.getValue(PREFIX_PHONE).isPresent()) {
+                editPersonDescriptor.setPhone(ParserUtil.parsePhone(argMultimap.getValue(PREFIX_PHONE).get()));
+            }
+            if (argMultimap.getValue(PREFIX_ADDRESS).isPresent()) {
+                editPersonDescriptor.setAddress(ParserUtil.parseAddress(argMultimap.getValue(PREFIX_ADDRESS).get()));
+            }
+            if (argMultimap.getValue(PREFIX_NRIC).isPresent()) {
+                editPersonDescriptor.setNric(ParserUtil.parseNric(argMultimap.getValue(PREFIX_NRIC).get()));
+            }
+            if (argMultimap.getValue(PREFIX_SALARY).isPresent()) {
+                editPersonDescriptor.setSalary(ParserUtil.parseSalary(argMultimap.getValue(PREFIX_SALARY).get()));
+            }
+            if (argMultimap.getValue(PREFIX_COMPANY).isPresent()) {
+                editPersonDescriptor.setCompany(ParserUtil.parseCompany(argMultimap.getValue(PREFIX_COMPANY).get()));
+            }
+            if (argMultimap.getValue(PREFIX_RANK).isPresent()) {
+                editPersonDescriptor.setRank(ParserUtil.parseRank(argMultimap.getValue(PREFIX_RANK).get()));
+            }
+        } catch (ParseException e) {
+            throw new ParseException(e.getMessage() + "\n"
+            + String.format(MESSAGE_INVALID_COMMAND_FORMAT, EditCommand.MESSAGE_USAGE));
         }
 
         if (!editPersonDescriptor.isAnyFieldEdited()) {
