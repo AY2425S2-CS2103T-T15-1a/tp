@@ -40,7 +40,7 @@ HRQuickAccess is a **desktop application** designed for **S1 Branch HR staff** t
 
 1. Ensure **Java 17 or above** is installed on your computer.<br>
    **Mac users:** Ensure you have the precise JDK version prescribed [here](https://se-education.org/guides/tutorials/javaInstallationMac.html).
-2. Download the latest `.jar` file from [Here](https://github.com/AY2425S2-CS2103T-T15-1a/tp/releases/tag/V1.4).
+2. Download the latest `.jar` file from [Here](https://github.com/AY2425S2-CS2103T-T15-1a/tp/releases/tag/V1.6).
 3. Copy the file to the folder you want to use as the **home folder** for HRQuickAccess.
 4. Open a **command terminal**, navigate (`cd`) to the folder where you placed the .jar file.
 5. Run the application with the command:
