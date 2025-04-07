@@ -40,7 +40,7 @@ HRQuickAccess is a **desktop application** designed for **S1 Branch HR staff** t
 
 1. Ensure **Java 17 or above** is installed on your computer.<br>
    **Mac users:** Ensure you have the precise JDK version prescribed [here](https://se-education.org/guides/tutorials/javaInstallationMac.html).
-2. Download the latest `.jar` file from [Here](https://github.com/AY2425S2-CS2103T-T15-1a/tp/releases/tag/V1.4).
+2. Download the latest `.jar` file from [Here](https://github.com/AY2425S2-CS2103T-T15-1a/tp/releases/tag/V1.6).
 3. Copy the file to the folder you want to use as the **home folder** for HRQuickAccess.
 4. Open a **command terminal**, navigate (`cd`) to the folder where you placed the .jar file.
 5. Run the application with the command:
@@ -110,9 +110,9 @@ add n/Corey p/91234567 a/123 Orchard Road nr/Txxxx123A s/800 c/Alpha r/PTE
 ```
 
 **Validation:**
-- **Name:** Name can contain alphabetical characters, spaces, and at most one of each special character (i.e. slashes (/), at symbol (@), hyphens (-)), and must not be blank; leading and trailing spaces are trimmed
+- **Name:** Alphabetical characters and spaces, but cannot be blank; leading and trailing spaces are trimmed
 - **Phone:** 8-digit, starts with 8 or 9
-- **Address:** Alphanumeric characters, spaces, special characters (i.e., comma, period, hashtags, parentheses)
+- **Address:** Alphanumeric characters, spaces, special characters (,.`-#()), and must not be blank or only spaces
 - **Company:** Alphabetical characters
 - **Rank:** 2-4 Uppercase alphanumeric characters (e.g., CPL, 2LT)
 - **Salary:** 100–9999 SGD
