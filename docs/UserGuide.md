@@ -229,7 +229,7 @@ Removes a duty date from one personnel.
 
 **Format:**
 ```
-unassign [INDEX] d/yyyy-MM-dd
+unassign INDEX d/yyyy-MM-dd
 ```
 **Example:**
 ```
