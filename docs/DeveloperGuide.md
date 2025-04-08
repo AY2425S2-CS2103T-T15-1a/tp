@@ -348,7 +348,7 @@ _{More to be added}_
 
   - 1a1. The system displays an error message indicating the required fields and correct format to enter.
 
-    Use case resumes at step 2.
+    Use case resumes at step 1.
 
 - 1b. The system check that there isn’t such personnel.
 
