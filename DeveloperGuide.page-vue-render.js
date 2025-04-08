@@ -275,7 +275,7 @@ with(this){return _c('ol',[_c('li',[_v("The branch staff types a command to dele
 with(this){return _c('p',[_c('strong',[_v("Extensions:")])])}
 },function anonymous(
 ) {
-with(this){return _c('ul',[_c('li',[_c('p',[_v("1a. The branch staff provides insufficient input.")]),_v(" "),_c('ul',[_c('li',[_c('p',[_v("1a1. The system displays an error message indicating the required fields and correct format to enter.")]),_v(" "),_c('p',[_v("Use case resumes at step 2.")])])])]),_v(" "),_c('li',[_c('p',[_v("1b. The system check that there isn’t such personnel.")]),_v(" "),_c('ul',[_c('li',[_c('p',[_v("1b1. The system displays an error message stating that the personnel cannot be found.")]),_v(" "),_c('p',[_v("Use case end.")])])])])])}
+with(this){return _c('ul',[_c('li',[_c('p',[_v("1a. The branch staff provides insufficient input.")]),_v(" "),_c('ul',[_c('li',[_c('p',[_v("1a1. The system displays an error message indicating the required fields and correct format to enter.")]),_v(" "),_c('p',[_v("Use case resumes at step 1.")])])])]),_v(" "),_c('li',[_c('p',[_v("1b. The system check that there isn’t such personnel.")]),_v(" "),_c('ul',[_c('li',[_c('p',[_v("1b1. The system displays an error message stating that the personnel cannot be found.")]),_v(" "),_c('p',[_v("Use case end.")])])])])])}
 },function anonymous(
 ) {
 with(this){return _c('h4',{attrs:{"id":"use-case-uc4-assign-a-duty-to-a-personnel-s-entry"}},[_c('strong',[_v("Use Case: UC4 - Assign a duty to a personnel’s entry")]),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#use-case-uc4-assign-a-duty-to-a-personnel-s-entry","onclick":"event.stopPropagation()"}})])}
@@ -341,6 +341,6 @@ with(this){return _c('h3',{attrs:{"id":"acknowledgement"}},[_v("Acknowledgement"
 with(this){return _c('ul',[_c('li',[_v("The placeholder image was obtained from a third-party source and is allowed for free use. You can find it here: "),_c('a',{attrs:{"href":"https://www.vecteezy.com/vector-art/36594092-man-empty-avatar-vector-photo-placeholder-for-social-networks-resumes-forums-and-dating-sites-male-and-female-no-photo-images-for-unfilled-user-profile"}},[_v("Vecteezy - Man Empty Avatar")]),_v(".")]),_v(" "),_c('li',[_c('strong',[_v("AI Tools and Usage")]),_v(" "),_c('ul',[_c('li',[_c('a',{attrs:{"href":"https://chat.openai.com/"}},[_v("ChatGPT")]),_v(" for fixing documentation (DG, UG) phrases and grammar errors.")])])])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.6.0")]),_v(", generated on Tue, 8 Apr 2025, 13:10:09 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.6.0")]),_v(", generated on Tue, 8 Apr 2025, 13:22:07 GMT+8]")])])])}
 }];
   
