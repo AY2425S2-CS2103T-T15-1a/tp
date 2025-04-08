@@ -329,13 +329,6 @@ _{More to be added}_
 
     Use case end.
 
-- 2d. The system found that there are multiple personnel's entries.
-
-  - 2d1. The system displays a list of matching personnel and asks which entry to view.
-  - 2d2. The branch staff selects the specific entry to view.
-
-    Use case resumes at step 3.
-
 #### **Use Case: UC3 - Delete a personnel’s entry**
 
 **Preconditions:**
