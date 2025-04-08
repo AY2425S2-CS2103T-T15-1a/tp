@@ -329,13 +329,6 @@ _{More to be added}_
 
     Use case end.
 
-- 2d. The system found that there are multiple personnel's entries.
-
-  - 2d1. The system displays a list of matching personnel and asks which entry to view.
-  - 2d2. The branch staff selects the specific entry to view.
-
-    Use case resumes at step 3.
-
 #### **Use Case: UC3 - Delete a personnel’s entry**
 
 **Preconditions:**
@@ -373,39 +366,31 @@ _{More to be added}_
 
 **Main Success Scenario (MSS):**
 
-1.  The branch staff request to add duty to a personnel’s entry.
-2.  The branch staff enters the duty’s details of the personnel.
-3.  The system assigns the duty to the personnel’s entry.
-4.  The system displays a success message to the branch staff and shows related changes.
+1.  The branch staff request to assign a duty to a person’s entry and provides the required input.
+2.  The system assigns the duty to the personnel’s entry.
+3.  The system displays a success message to the branch staff and shows the related changes.
 
     Use case ends.
 
 **Extensions:**
 
-- 2a. The branch staff provides insufficient input.
+- 1a. The branch staff provides insufficient input.
 
-  - 2a1. The system displays an error message indicating the required fields and correct format to enter.
+  - 1a1. The system displays an error message indicating the required fields and correct format to enter.
 
-    Use case resumes at step 2.
+    Use case resumes at step 1.
 
-- 2b. The system detects invalid information in the provided details.
+- 1b. The system detects invalid information in the provided details.
 
-  - 2b1. The system states the incorrect fields and provides the correct format to enter.
+  - 1b1. The system states the incorrect fields and provides the correct format to enter.
 
-    Use case resumes at step 2.
+    Use case resumes at step 1.
 
-- 2c. The system identifies that there isn’t such personnel.
+- 1c. The system identifies that there isn’t such personnel.
 
-  - 2c1. The system displays an error message stating that the personnel cannot be found and thus cannot be assigned a duty.
+  - 1c1. The system displays an error message stating that the personnel cannot be found and thus cannot be assigned a duty.
 
     Use case end.
-
-- 2d. The system found that there are multiple personnels’ entries.
-
-  - 2d1. The system displays a list of matching personnel and asks which entry to assign a duty to.
-  - 2d2. The branch staff selects the specific entry to assign a duty to.
-
-    Use case resumes at step 3.
 
 ### Non-Functional Requirements
 
