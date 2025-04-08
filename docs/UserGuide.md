@@ -318,15 +318,14 @@ exit
 |--------------------|--------------------------------------------------------------------------------------------------------|
 | **Help**           | `help`                                                                                                 |
 | **List**           | `list`                                                                                                 |
-| **Add**            | `add n/Corey p/91234567 a/263 River Valley Road #09-11 Aspen Heights nr/Txxxx345H s/800 c/ALPHA r/CPL` |
+| **Add**            | `add n/NAME p/PHONE a/ADDRESS nr/MASKED_NRIC s/SALARY c/COMPANY r/RANK` <br> e.g., `add n/Corey p/91234567 a/263 River Valley Road #09-11 Aspen Heights nr/Txxxx345H s/800 c/ALPHA r/CPL` |
 | **Delete**         | `delete INDEX` <br> e.g., `delete 2`                                                                   |
 | **Edit**           | `edit INDEX [fields]` <br> e.g., `edit 1 n/Jane Doe p/91234567`                                        |
 | **Find**           | `find NAME [NAME]...` <br> e.g., `find Corey`                                                          |
 | **Filter**         | `filter c/COMPANY [COMPANY]...` <br> e.g., `filter c/ALPHA BRAVO`                                      |
 | **View**           | `view INDEX` <br> e.g., `view 3`                                                                       |
 | **Assign**         | `assign INDEX... d/yyyy-MM-dd` <br> e.g., `assign 1 2 d/2025-04-15`                                    |
-| **Unassign**       | `unassign [INDEX] d/yyyy-MM-dd` <br> e.g., `unassign 1 d/2025-04-15`                                   |
+| **Unassign**       | `unassign INDEX d/yyyy-MM-dd` <br> e.g., `unassign 1 d/2025-04-15`                                   |
 | **Reassign**       | `reassign INDEX d/OLD nd/NEW` <br> e.g., `reassign 1 d/2025-04-15 nd/2025-04-25`                       |
 | **Clear**          | `clear`                                                                                                |
 | **Exit**           | `exit`                                                                                                 |
-
