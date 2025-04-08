@@ -325,7 +325,7 @@ exit
 | **Filter**         | `filter c/COMPANY [COMPANY]...` <br> e.g., `filter c/ALPHA BRAVO`                                      |
 | **View**           | `view INDEX` <br> e.g., `view 3`                                                                       |
 | **Assign**         | `assign INDEX... d/yyyy-MM-dd` <br> e.g., `assign 1 2 d/2025-04-15`                                    |
-| **Unassign**       | `unassign INDEX... d/yyyy-MM-dd` <br> e.g., `unassign 1 d/2025-04-15`                                  |
+| **Unassign**       | `unassign [INDEX] d/yyyy-MM-dd` <br> e.g., `unassign 1 d/2025-04-15`                                   |
 | **Reassign**       | `reassign INDEX d/OLD nd/NEW` <br> e.g., `reassign 1 d/2025-04-15 nd/2025-04-25`                       |
 | **Clear**          | `clear`                                                                                                |
 | **Exit**           | `exit`                                                                                                 |
